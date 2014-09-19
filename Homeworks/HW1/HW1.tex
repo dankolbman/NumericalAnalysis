@@ -176,6 +176,27 @@
 
   \section{Multidimensional Newton's Method}
 
+  \begin{align}
+    \label{eq:Q}
+    V(B+W)^2 - S\frac{B+2W}{W^2}=Q \\
+    \label{eq:N}
+    -\frac{B}{2}(1+V)+\frac{S}{2}W^{-2}-W+\frac{1}{2}\left[(1-V)W-D\sqrt{1-V}\right]=N
+  \end{align}
+
+  Solve  Eq. \ref{eq:Q} for $V(W)$:
+
+  \begin{align}
+    \label{eq:V(W)}
+    V = \frac{Q}{(B+W)^2} + S\frac{B+2W}{W^2(B+W)^2}
+  \end{align}
+
+  And substitute Eq. \ref{eq:V(W)} into Eq. \ref{eq:N} and set it to 0:
+  
+  \begin{align}
+    -\frac{B}{2}(1+\frac{Q}{(B+W)^2} + S\frac{B+2W}{W^2(B+W)^2})+\frac{S}{2}W^{-2}-W\nonumber\\
++\frac{1}{2}\left[(1-V)W - D\sqrt{1-\frac{Q}{(B+W)^2} + S\frac{B+2W}{W^2(B+W)^2}}\right]-N=0
+  \end{align}
+
   \clearpage
 
   \section{Blackbody Radiation}
