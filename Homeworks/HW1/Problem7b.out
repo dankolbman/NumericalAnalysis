@@ -1,0 +1,7 @@
+Until difference between n+1 and n term is less than 10^-15
+x = 2
+terms: 5 value: 244.60000000000002
+x = -2
+terms: 38 value: 0.0024787521766681028
+x = -12
+terms: 99 value: 0.05229714454636593

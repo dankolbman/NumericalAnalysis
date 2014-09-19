@@ -1,0 +1,7 @@
+Squaring a square-root:
+sqrt(a)^2 = 25.0 = 25.0
+sqrt(a)^2 = 250.0 = 250.0
+sqrt(a)^2 = 2500.0 = 2500.0
+sqrt(a)^2 = 25000.0 != 25000.000000000004
+Ajusting decimal placement before taking the square-root:
+sqrt(a)^2 = 25000.0 = 25000.0

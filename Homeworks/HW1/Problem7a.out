@@ -1,0 +1,7 @@
+Until relative error is less than 10^-9
+x = 2
+terms: 34 value: 403.4287934927351
+x = -2
+terms: 99 value: 0.002478752176668117
+x = -12
+terms: 99 value: 0.05229714454636593

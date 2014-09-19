@@ -1,8 +1,6 @@
 import matplotlib.pyplot as plt
-
 def func(x):
   return x**4 - 2
-
 def secant(a, b, thresh, max_step, f):
   itr = []
   diffs = []
@@ -21,9 +19,9 @@ def secant(a, b, thresh, max_step, f):
     if( abs(x_new_val) < thresh):
       return x_new, itr, diffs
   return x_new, itr, diffs
+x, itr, diffs = secant(0, 2, 1e-10, 100, func)
 
-x, itr, diffs = secant(0, 2, 10e-10, 100, func)
-
+print(x)
 plt.plot(itr, diffs)
 plt.gca().set_yscale('log')
 plt.grid()
