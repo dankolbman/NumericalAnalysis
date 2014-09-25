@@ -23,7 +23,7 @@ def fpi(x, thresh, max_step, f, itr, diffs):
     return fpi(x_new, thresh, max_step-1, f, itr, diffs)
 
 print("g1(x):")
-x, itr, diffs = fpi(1, 10e-10, 900, g1, [], [])
+x, itr, diffs = fpi(1, 1e-10, 900, g1, [], [])
 
 
 plt.plot(itr, diffs)
@@ -32,7 +32,7 @@ plt.grid()
 plt.title('FPI Convergence for g1(x)')
 plt.ylabel('log( |f(x_n)| )')
 plt.xlabel('step, n')
-plt.savefig('Problem4da.png')
+#plt.savefig('Problem4da.png')
 plt.show()
 
 print("g2(x):")
@@ -43,7 +43,7 @@ plt.grid()
 plt.title('FPI Convergence for g2(x)')
 plt.ylabel('log( |f(x_n)| )')
 plt.xlabel('step, n')
-plt.savefig('Problem4db.png')
+#plt.savefig('Problem4db.png')
 plt.show()
 
 print("g2(x):")
@@ -55,6 +55,6 @@ plt.grid()
 plt.title('FPI Convergence for g3(x)')
 plt.ylabel('log( |f(x_n)| )')
 plt.xlabel('step, n')
-plt.savefig('Problem4dc.png')
+#plt.savefig('Problem4dc.png')
 plt.show()
 

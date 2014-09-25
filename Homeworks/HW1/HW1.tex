@@ -40,7 +40,7 @@
   
   \clearpage
 
-  \subsection{Matrix inversion via libraries and research:}
+  \section{Matrix inversion via libraries and research:}
   Using numpy:
   \lstinputlisting[language=Python]{Problem2.py}
   Output:
@@ -62,7 +62,7 @@
   \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{Problem4a.png}
-    \caption{(Approximately) Exponential Convergence}
+    \caption{(Approximately) Quadratic Convergence}
   \end{figure}
 
   \clearpage
@@ -83,7 +83,7 @@
   \begin{figure}[h!]
     \centering
     \includegraphics[width=0.75\textwidth]{Problem4c.png}
-    \caption{Converges exponentially}
+    \caption{Converges quadratically}
   \end{figure}
 
   \clearpage 
@@ -125,6 +125,45 @@
   \clearpage
 
   \section{More FPI}
+
+  \begin{align}
+    \label{eq:quad}
+    f(x) &= 2x^3 - 6x -1
+  \end{align}
+  To find the roots of Eq. \ref{eq:quad}, we write $f(x)$ as $f(x)=x-g(x)=0$
+  where possible forms of $g(x)$ are:
+  \begin{align}
+    \label{eq:g1}
+    g_1(x) &= \frac{1}{2x^2-6} \\
+    \label{eq:g2}
+    g_2(x) &= \frac{3}{x}+\frac{1}{2x^2} \\
+    \label{eq:g3}
+    g_3(x) &= \sqrt[3]{3x + \frac{1}{2}}
+  \end{align}
+
+  Each equation gives a root of Eq. \ref{eq:quad}. All equations converge
+  quadratically.\\
+  $g_1(x)$ converges to $-0.16825440$\\
+  $g_2(x)$ converges to $-1.64177875$\\
+  $g_3(x)$ converges to $1.8100379292$
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Problem5a.png}
+    \caption{See Eq. \ref{eq:g1}}
+  \end{figure}
+  
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Problem5b.png}
+    \caption{See Eq. \ref{eq:g2}}
+  \end{figure}
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Problem5c.png}
+    \caption{See Eq. \ref{eq:g3}}
+  \end{figure}
 
   \clearpage
 
@@ -170,6 +209,19 @@
   approximation.
   \\
   For $x=-12$, both methods hit the step limit and produce the same approximation.
+
+  \lstinputlisting{Problem7c.out}
+  
+  The precision for $x_0=20$ is not particularly good, though  its accuracy
+  indicates that it will eventually converge to a more precise answer. For larger
+  magnitudes of $x_0$, many more iterations are required until the factorial
+  in the denominator reaches a large enough number that will result in small
+  terms capable of converging on a precise value.
+  For $x_0=-20$, this problem is even more apparant as each term will alternate
+  between positive and negative. The terms can also decay in size very quickly
+  resulting in an approximation that decays more and more slowly away from a
+  very innacurate estimate, as is in the case of $x_0=-20$.
+
   
 
   \clearpage

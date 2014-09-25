@@ -6,8 +6,9 @@ def expand(x,thresh):
   for n in range(0,100):
     new_term = last_term*3*x/(n+1)
     approx += new_term
-    #if(abs(new_term - last_term) < thresh):
-    if(abs(new_term-last_term) < thresh):
+    #print(abs(approx - math.exp(3*x)))
+    #if(abs(approx - math.exp(3*x)) < thresh):
+    if(abs(new_term - last_term) < thresh):
       break
     last_term = new_term
   print('terms: '+str(n), 'value: '+str(approx))
@@ -15,11 +16,11 @@ def expand(x,thresh):
 
 print('Until relative error is less than 10^-15')
 print('x = 2')
-expand(2, 1e-15)
+expand(2, 1e-9)
 print('x = -2')
-expand(-2, 1e-15)
+expand(-2, 1e-9)
 print('x = -12')
-expand(-12, 1e-15)
+expand(-12, 1e-9)
 print('Until relative error is less than 10^-15')
 print('x = 2')
 expand(2, 1e-15)
@@ -27,3 +28,9 @@ print('x = -2')
 expand(-2, 1e-15)
 print('x = -12')
 expand(-12, 1e-15)
+
+print('Until relative error is less than 10^-15')
+print('x = 20')
+expand(20, 1e-9)
+print('x = -20')
+expand(-20, 1e-9)

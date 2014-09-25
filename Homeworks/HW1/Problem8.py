@@ -33,8 +33,9 @@ def x_next(x_last, f, thresh, max_steps, itr, diffs):
   else:   # Recursion might not be the best idea...
     return x_next(x, f, thresh, max_steps - 1, itr, diffs)
 
+print('Using 1D Newton-Raphson:')
 W, itr, diffs = x_next(0.31, zeroW, 1e-10, 100, [],[])
-print('W',(W))
+print('W',W)
 print('V',V(W))
 
 # The function we want to find the root of
