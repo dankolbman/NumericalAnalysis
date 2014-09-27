@@ -53,6 +53,9 @@ def func(x):
   T = 1000
   return -a*(8*math.pi)*(T/1000)**3*(math.exp(x)*(x-3)+3)*x**2/((math.exp(x)-1)**2)
 
+
+
+
 def secant(a, b, thresh, max_step, f):
   itr = []
   diffs = []
@@ -68,15 +71,42 @@ def secant(a, b, thresh, max_step, f):
     x_new_val = f(x_new)
     itr.append(i)
     diffs.append(abs(x_new_val))
+    print('itr: ',i,'x: ', x_new, 'f(x): ', x_new_val)
     if( abs(x_new_val) < thresh):
       return x_new, itr, diffs
   return x_new, itr, diffs
 
-x, itr, diffs = secant(1, 10, 10e-10, 100, func)
+#x, itr, diffs = secant(1, 10, 10e-10, 100, func)
+#print(x, len(itr))
+
+#x = [ i/100 for i in range(1,10000) ]
+#fx = [ func(i/100) for i in range(1,10000) ]
+plt.close()
+#plt.plot(x,fx)
+#plt.show()
+
+
+
+def zerof(x):
+  return (x**2*(math.exp(x)*(x-3)+3))/((math.exp(x)-1)**2)
+
+def fun(x):
+  return x**3/(math.exp(x)-1)
+
+def fwhm(x):
+  return fun(x)/fun(2.821439372122) - 0.5
+
+# Find points for FWHM
+x, itr, diffs = secant(1,3, 10e-10, 100, fwhm)
+print(x, len(itr))
+x, itr, diffs = secant(4,6, 10e-10, 100, fwhm)
 print(x, len(itr))
 
-x = [ i/100 for i in range(1,10000) ]
-fx = [ func(i/100) for i in range(1,10000) ]
+x = [ i/1000 for i in range(1,10000) ]
+fx = [ fwhm(i/1000) for i in range(1,10000) ]
 plt.close()
+plt.title(r'$u(x_h;T)-\frac{1}{2}u(x_{max};T)$', fontsize=24)
 plt.plot(x,fx)
+plt.savefig('Problem9d.png')
 plt.show()
+
