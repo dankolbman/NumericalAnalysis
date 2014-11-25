@@ -6,7 +6,7 @@ import random
 from matplotlib import rc
 rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
 rc('text', usetex=True)
-font = {'family' : 'normal','size'   : 24}
+font = {'family' : 'normal','size'   : 16}
 rc('font', **font)
 
 # Simpson's method integration
@@ -110,4 +110,6 @@ print('Energy from trapezoid rule', simpson(x, fx))
 
 plt.plot(x, fx)
 plt.plot(t, L, 'ro', markersize=12)
+plt.title('Luminosity with Cubic Spline Interpolation')
+plt.savefig('Problem3.png')
 plt.show()

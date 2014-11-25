@@ -21,19 +21,51 @@ def simpson(f, a, b, n):
   return tot*h/3
 
 def numbers(nu):
-  kBT = 1
-  h = 1
-  c = 1
-  n = 8*np.pi*(nu**4)/(c**4)/(math.exp(h*nu/(kBT))-1)
+  #n = 8*np.pi*(nu**4)/(c**4)/(math.exp(h*nu/(kBT))-1)
+  #n = nu**2/(math.exp(nu) - 1)
+  n = (np.tan(nu)/(np.cos(nu)))**2/(np.exp(np.tan(nu))-1)
   return n
-  
 
-x = np.linspace(0, 20, 500)
-fx = [ numbers(i) for i in x ]
-area = simpson(numbers, 0.01, 25, 1000)
+def med(nu):
+  #n = 8*np.pi*(nu**4)/(c**4)/(math.exp(h*nu/(kBT))-1)
+  #n = nu**2/(math.exp(nu) - 1)
+  n = numbers(nu)*nu
+  return n
 
-print('Number density:',area)
+def numbersLamb(lamb):
+  n = 1/(lamb**4)/(math.exp(1/lamb)-1)
+  return n
 
-#plt.plot(x, fx)
+def medLamb(lamb):
+  return lamb*numbersLamb(lamb)
+
+def var(nu, mean=1.09030761383):
+  return (nu-mean)**2
+
+x = np.linspace(0.01, np.pi/2-0.0001, 500)
+fx = [ med(i) for i in x ]
+area = simpson(numbers, 0.01, np.pi/2-0.0001, 1000)
+
+print('Number density:', area)
+
+median = 0.5*simpson(med, 0.01, np.pi/2-0.0001, 1000)
+print('Median Energy:', median)
+
+mean = median*2/area
+print('Mean energy:',mean)
+
+areaLamb = simpson(numbersLamb, 0.01, 10, 10000)
+medianLamb = 0.5*simpson(medLamb, 0.01, 10, 10000)
+meanLamb = 2*medianLamb/areaLamb
+print('Mean lamb:', meanLamb)
+
+print('c estimate:', meanLamb*mean)
+
+v = simpson(var, 0.01, np.pi/2-0.0001, 1000)
+stdev = math.sqrt(v/mean)
+print('Standard Deviation:', stdev)
+
+
+plt.plot(x, fx)
 #plt.gcf().gca().set_yscale('log')
 #plt.show()

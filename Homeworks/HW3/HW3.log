@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2014.10.22)  5 NOV 2014 19:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2014.11.11)  17 NOV 2014 17:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -292,13 +292,13 @@ e
 <Problem2ia.png, id=1, 578.16pt x 433.62pt>
 File: Problem2ia.png Graphic file (type png)
  <use Problem2ia.png>
-Package pdftex.def Info: Problem2ia.png used on input line 56.
+Package pdftex.def Info: Problem2ia.png used on input line 55.
 (pdftex.def)             Requested size: 433.62166pt x 325.2142pt.
 
 <Problem2ib.png, id=3, 578.16pt x 433.62pt>
 File: Problem2ib.png Graphic file (type png)
  <use Problem2ib.png>
-Package pdftex.def Info: Problem2ib.png used on input line 62.
+Package pdftex.def Info: Problem2ib.png used on input line 61.
 (pdftex.def)             Requested size: 433.62166pt x 325.2142pt.
 
 
@@ -307,7 +307,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Problem2ii.png, id=4, 578.16pt x 433.62pt>
 File: Problem2ii.png Graphic file (type png)
  <use Problem2ii.png>
-Package pdftex.def Info: Problem2ii.png used on input line 70.
+Package pdftex.def Info: Problem2ii.png used on input line 69.
 (pdftex.def)             Requested size: 433.62166pt x 325.2142pt.
 
 
@@ -316,27 +316,37 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Problem2ia.png>]
-[2 <./Problem2ib.png>] [3 <./Problem2ii.png>] (./HW3.aux) ) 
+[2 <./Problem2ib.png> <./Problem2ii.png>]
+<Problem3.png, id=24, 578.16pt x 433.62pt>
+File: Problem3.png Graphic file (type png)
+ <use Problem3.png>
+Package pdftex.def Info: Problem3.png used on input line 79.
+(pdftex.def)             Requested size: 433.62166pt x 325.2142pt.
+ [3
+
+ <./Problem3.png>] [4] [5
+
+] (./HW3.aux) ) 
 Here is how much of TeX's memory you used:
- 3955 strings out of 493108
- 54629 string characters out of 6140724
- 143829 words of memory out of 5000000
- 7363 multiletter control sequences out of 15000+600000
+ 3961 strings out of 493108
+ 54714 string characters out of 6140724
+ 146830 words of memory out of 5000000
+ 7368 multiletter control sequences out of 15000+600000
  14849 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,40p,238b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy8.pfb>
-Output written on HW3.pdf (3 pages, 237248 bytes).
+ 38i,11n,40p,238b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on HW3.pdf (5 pages, 283814 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 65 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

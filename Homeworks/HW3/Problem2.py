@@ -152,4 +152,5 @@ plt.title('Absolute Error Using Simpsons Rule')
 plt.xlabel('Number of values')
 plt.ylabel('Absolute Error')
 plt.savefig('Problem2ii.png')
-#plt.show()
+
+plt.show()
